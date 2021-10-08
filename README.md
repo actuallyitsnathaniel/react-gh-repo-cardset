@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# React Github Repo Card Set
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Installation
 
-## Available Scripts
+!! This is not available yet as an npm package, but once the package is finished it will be !!  
+Rip the code from here and declare it all yourself for now. It is located at this directory within the repo:
 
-In the project directory, you can run:
+```
+/src/lib/components/react-gh-repe-cardset
+```
 
-### `yarn start`
+I used [dotenv](https://www.npmjs.com/package/dotenv) to handle my GitHub API token during development. If you have never used dotenv before, learn that first before anything else. Dotenv is declared in the source index.js file, but the actual .env file must be in the ROOT directory——neighboring /node_modules, /src, and /public.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+_\*\*\*Make sure that your .env file is ignored in your own repositores_
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+I used it because [Github's public API limits all users' API calls to 60/hr](https://docs.github.com/en/developers/apps/building-github-apps/rate-limits-for-github-apps) unless you utilize private access tokens or something similar. It may be overkill but it helped me tons. \*
 
-### `yarn test`
+##### _\* I was a newbie when I first accessed their API, so I hit the limit quickly and was distressed when things stopped working._
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In your file, presumably located at `src/.env`, simply put your credentials in the corresponding fiels like so:
 
-### `yarn build`
+```bash
+GIT_USER=<YOUR_USER_HANDLE>
+GIT_TOKEN=<YOUR_PRIVATE_ACCES_TOKEN>
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+You can import it in whichever style you like. Here are two examples:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```javascript
+import GitHubRepoCards from "react-gh-repo-cardset";
+// OR
+const GithubRepoCards = require("react-gh-repo-cardset");
 
-### `yarn eject`
+// your spankin' sweet code...
+<GitHubRepoCards user="GIT_USER" token="GIT_TOKEN">
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+And that's all! This isn't a customizable package yet, but I'm planning on making it more modular as time goes on.

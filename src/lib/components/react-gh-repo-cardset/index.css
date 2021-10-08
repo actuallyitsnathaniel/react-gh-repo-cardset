@@ -1,0 +1,66 @@
+/** Feel free to use this specific font inheritance if you like*/
+/* .github-text {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  padding: 0px;
+} */
+
+.git-repo-card {
+  background-color: #111;
+  border: #333 solid;
+  border-radius: 1vh;
+  border-width: 0.01ch;
+  color: inherit;
+  font-weight: 450;
+  font-size: 2rem;
+  height: 200px;
+  margin: 15px;
+  max-width: 33%;
+  min-width: 280px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: 0.1s ease-in-out;
+  width: 30%;
+}
+
+.git-repo-card-contents {
+  padding: 0.5ch;
+}
+
+.git-repo-card:hover {
+  filter: brightness(125%);
+  transform: scale(105%);
+}
+
+.git-repo-card-set {
+  display: flex;
+  flex-flow: wrap row;
+}
+
+.git-repo-card-title {
+  color: #4987d8;
+  font-size: 50%;
+  padding-bottom: 0.15ch;
+}
+
+.git-repo-card-desc {
+  color: #727272;
+  font-size: 35%;
+}
+
+.git-repo-card-codeType {
+  color: #aaa;
+  font-size: 35%;
+  position: absolute;
+  padding-bottom: 2ch;
+  bottom: 2px;
+}
+
+@media (max-width: 650px) {
+  .git-repo-card {
+    max-width: 95%;
+    width: 95%;
+  }
+}
