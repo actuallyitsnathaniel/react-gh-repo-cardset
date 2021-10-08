@@ -2,12 +2,31 @@
 
 ## Installation
 
-!! This is not available yet as an npm package, but once the package is finished it will be !!  
-Rip the code from here and declare it all yourself for now. It is located at this directory within the repo:
+!! This is not available yet as an npm package, but once the package is finished it will be !!
+
+If you'd like to run this project as-is, follow these steps:
+
+Clone the repo:
+
+```
+git clone https://github.com/actuallyitsnathaniel/react-gh-repo-cardset
+```
+
+Move into the directory, then install node_modules with the following commands:
+
+```
+cd react-gh-repo-cardset
+npm install
+```
+
+Alternatively, you can rip the code from here and declare it all yourself for now.  
+It is located at this directory within the repo:
 
 ```
 /src/lib/components/react-gh-repe-cardset
 ```
+
+## Some Notes
 
 I used [dotenv](https://www.npmjs.com/package/dotenv) to handle my GitHub API token during development. If you have never used dotenv before, learn that first before anything else. Dotenv is declared in the source index.js file, but the actual .env file must be in the ROOT directory——neighboring /node_modules, /src, and /public.
 
