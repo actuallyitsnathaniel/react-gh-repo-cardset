@@ -16,7 +16,7 @@ Move into the directory, then install node_modules with the following commands:
 
 ```
 cd react-gh-repo-cardset
-npm install
+yarn install
 ```
 
 Alternatively, you can rip the code from here and declare it all yourself for now.  
