@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./index.css";
 
 // publishing first NPM package
-//https://www.youtube.com/watch?v=J4b_T-qH3BY&ab_channel=WebDevSimplified
+//https://levelup.gitconnected.com/publish-react-components-as-an-npm-package-7a671a2fb7f
 
 // Dynamically propagated based on number of repositories
 function GitRepoCard(props) {
