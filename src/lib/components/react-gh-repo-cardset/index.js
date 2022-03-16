@@ -20,9 +20,9 @@ function GitRepoCard(props) {
 
       if (localStorage.length === 0) {
         console.log(props.username);
-        fetch(`https://api.github.com/users/${props.username}/repos`, {
+        fetch(`https://@api.github.com/users/${props.username}/repos`, {
           headers: {
-            // Authorization: `token ${props.token}`,
+            Authorization: `${props.token}`,
           },
         })
           .then((response) => {
