@@ -6,7 +6,7 @@ import "./index.css";
 //https://levelup.gitconnected.com/publish-react-components-as-an-npm-package-7a671a2fb7f
 
 // Dynamically propagated based on number of repositories
-function GitRepoCard(props) {
+function GitRepoDeck(props) {
   // https://www.youtube.com/watch?v=5WFyhsnU4Ik&ab_channel=SteveGriffith-Prof3ssorSt3v3
 
   const [repos, setRepos] = useState([]);
@@ -85,4 +85,4 @@ function GitRepoCard(props) {
   );
 }
 
-export default GitRepoCard;
+export default GitRepoDeck;
